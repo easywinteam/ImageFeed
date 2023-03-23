@@ -1,13 +1,6 @@
-//
-//  ViewController.swift
-//  ImageFeed
-//
-//  Created by Максим Гудзик on 19.03.2023.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
+class ImageListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
