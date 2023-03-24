@@ -3,10 +3,10 @@ import UIKit
 class ImagesListViewController: UIViewController {
 
     @IBOutlet private var tableView: UITableView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.register(ImagesListCell.self, forCellReuseIdentifier: ImagesListCell.reuseIdentifier)
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        tableView.register(ImagesListCell.self, forCellReuseIdentifier: ImagesListCell.reuseIdentifier)
+//    }
     func configCell(for cell: ImagesListCell){ }
 
 }

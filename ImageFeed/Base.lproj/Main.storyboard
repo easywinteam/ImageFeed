@@ -22,7 +22,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="YP Black"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="150" id="x8L-6k-BMP">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="150" id="x8L-6k-BMP" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="361" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x8L-6k-BMP" id="cEZ-2l-VuA">
@@ -44,23 +44,20 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="add-MI-qXN">
-                                                    <rect key="frame" x="330" y="12" width="21" height="18"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="18" id="d3L-MU-sAS"/>
-                                                        <constraint firstAttribute="width" constant="21" id="mkZ-fY-OaP"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="No Active" imagePadding="1"/>
+                                                <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="add-MI-qXN" userLabel="Like Button">
+                                                    <rect key="frame" x="317" y="0.0" width="44" height="39"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
+                                                    <state key="normal" image="Active"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="ma9-Jb-HIw" secondAttribute="bottom" id="3mI-je-x6W"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TtQ-rQ-CIR" secondAttribute="trailing" constant="20" symbolic="YES" id="73W-mH-kWx"/>
                                                 <constraint firstAttribute="bottom" secondItem="TtQ-rQ-CIR" secondAttribute="bottom" constant="8" id="C4m-zi-kbZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="add-MI-qXN" secondAttribute="trailing" id="S9N-Cp-GJE"/>
                                                 <constraint firstItem="TtQ-rQ-CIR" firstAttribute="leading" secondItem="cEZ-2l-VuA" secondAttribute="leading" constant="8" id="XRW-Vx-xRV"/>
+                                                <constraint firstItem="add-MI-qXN" firstAttribute="top" secondItem="cEZ-2l-VuA" secondAttribute="top" id="bFd-am-VfU"/>
                                                 <constraint firstItem="ma9-Jb-HIw" firstAttribute="top" secondItem="cEZ-2l-VuA" secondAttribute="top" id="fu5-6c-2Tp"/>
-                                                <constraint firstAttribute="trailing" secondItem="add-MI-qXN" secondAttribute="trailing" constant="10" id="gBj-pF-KfK"/>
-                                                <constraint firstItem="add-MI-qXN" firstAttribute="top" secondItem="cEZ-2l-VuA" secondAttribute="top" constant="12" id="jag-Jp-fO1"/>
                                                 <constraint firstItem="ma9-Jb-HIw" firstAttribute="leading" secondItem="cEZ-2l-VuA" secondAttribute="leading" id="nJ2-aS-ti3"/>
                                                 <constraint firstAttribute="trailing" secondItem="ma9-Jb-HIw" secondAttribute="trailing" id="tdu-gO-V3P"/>
                                             </constraints>
@@ -88,7 +85,7 @@
     </scenes>
     <resources>
         <image name="0" width="200" height="132"/>
-        <image name="No Active" width="29.333333969116211" height="26"/>
+        <image name="Active" width="44" height="39"/>
         <namedColor name="YP Black">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
