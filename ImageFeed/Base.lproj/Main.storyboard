@@ -29,7 +29,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="ma9-Jb-HIw" userLabel="Cell Image">
-                                                    <rect key="frame" x="16" y="4" width="329" height="146"/>
+                                                    <rect key="frame" x="16" y="4" width="329" height="142"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="16"/>
@@ -50,7 +50,7 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="ma9-Jb-HIw" secondAttribute="bottom" id="3mI-je-x6W"/>
+                                                <constraint firstAttribute="bottom" secondItem="ma9-Jb-HIw" secondAttribute="bottom" constant="4" id="3mI-je-x6W"/>
                                                 <constraint firstItem="ma9-Jb-HIw" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TtQ-rQ-CIR" secondAttribute="trailing" constant="8" id="73W-mH-kWx"/>
                                                 <constraint firstAttribute="bottom" secondItem="TtQ-rQ-CIR" secondAttribute="bottom" constant="8" id="C4m-zi-kbZ"/>
                                                 <constraint firstItem="ma9-Jb-HIw" firstAttribute="trailing" secondItem="add-MI-qXN" secondAttribute="trailing" id="S9N-Cp-GJE"/>
