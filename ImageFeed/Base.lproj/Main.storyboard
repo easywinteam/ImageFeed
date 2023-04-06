@@ -151,9 +151,9 @@
                     </view>
                     <connections>
                         <outlet property="LoginNameLabel" destination="DHh-N0-51J" id="VaJ-ju-dlw"/>
+                        <outlet property="avatarImageView" destination="NvQ-hV-Bh9" id="FXk-Rl-oXJ"/>
                         <outlet property="descriptionLabel" destination="mm7-nT-Ylt" id="df2-Uh-i2F"/>
                         <outlet property="nameLabel" destination="7Gt-Jf-mA3" id="m6g-VL-3s9"/>
-                        <outlet property="profileImageView" destination="NvQ-hV-Bh9" id="FXk-Rl-oXJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Anc-fR-wcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
