@@ -10,5 +10,7 @@ final class ProfileViewController: UIViewController{
     
     @IBAction func logOut(_ sender: Any) {
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
