@@ -2,14 +2,13 @@ import UIKit
 
 final class ProfileViewController: UIViewController{
     
-    @IBOutlet var profileImage: UIImageView!
-    @IBOutlet var userFullName: UILabel!
-    @IBOutlet var userNickName: UILabel!
+    @IBOutlet var profileImageView: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var LoginNameLabel: UILabel!
     
-    @IBOutlet var userGreetings: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
     
-    @IBAction func signOut(_ sender: Any) {
-        print("Max Cool")
+    @IBAction func logOut(_ sender: Any) {
     }
     
 }
