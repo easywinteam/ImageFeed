@@ -1,4 +1,5 @@
 import UIKit
+// task for 8 sprint was completed
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,4 +27,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
 
