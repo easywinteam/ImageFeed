@@ -15,6 +15,7 @@
 		91AE670329C722540029659E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AE670129C722540029659E /* Main.storyboard */; };
 		91AE670829C722560029659E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AE670629C722560029659E /* LaunchScreen.storyboard */; };
 		91B6BF4329DECC5700C33379 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B6BF4229DECC5700C33379 /* ProfileViewController.swift */; };
+		91B6BF4629E08B2600C33379 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B6BF4529E08B2600C33379 /* SingleImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		91AE670729C722560029659E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91AE670929C722560029659E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91B6BF4229DECC5700C33379 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		91B6BF4529E08B2600C33379 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,8 @@
 			children = (
 				91AE66FB29C722540029659E /* AppDelegate.swift */,
 				91AE66FD29C722540029659E /* SceneDelegate.swift */,
-				91B6BF4229DECC5700C33379 /* ProfileViewController.swift */,
+				91B6BF4529E08B2600C33379 /* SingleImageViewController.swift */,
+				91B6BF4429E08AE500C33379 /* Profile */,
 				910E27EB29CD864600F1E25C /* ImageList */,
 				91AE670129C722540029659E /* Main.storyboard */,
 				91AE670629C722560029659E /* LaunchScreen.storyboard */,
@@ -79,6 +82,14 @@
 				910E27EE29CD9DE000F1E25C /* Assets.xcassets */,
 			);
 			path = ImageFeed;
+			sourceTree = "<group>";
+		};
+		91B6BF4429E08AE500C33379 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				91B6BF4229DECC5700C33379 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +167,7 @@
 				910E27ED29CD868500F1E25C /* ImagesListCell.swift in Sources */,
 				91B6BF4329DECC5700C33379 /* ProfileViewController.swift in Sources */,
 				91AE66FC29C722540029659E /* AppDelegate.swift in Sources */,
+				91B6BF4629E08B2600C33379 /* SingleImageViewController.swift in Sources */,
 				91AE66FE29C722540029659E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
