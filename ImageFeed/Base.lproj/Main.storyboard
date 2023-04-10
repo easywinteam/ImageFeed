@@ -84,26 +84,27 @@
                             <constraint firstAttribute="trailing" secondItem="UXO-Ly-anu" secondAttribute="trailing" id="qtR-QM-dx4"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_editorial_active" id="Tz7-kY-MaT"/>
                     <navigationItem key="navigationItem" id="Vqx-hE-EY4"/>
                     <connections>
                         <outlet property="tableView" destination="UXO-Ly-anu" id="WQ3-tK-BSj"/>
-                        <segue destination="lDp-pR-GVr" kind="show" identifier="ShowSingleImage" id="LzT-z0-fZv"/>
+                        <segue destination="lDp-pR-GVr" kind="presentation" identifier="ShowSingleImage" id="LzT-z0-fZv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1863.2" y="295.50224887556226"/>
+            <point key="canvasLocation" x="923" y="289"/>
         </scene>
         <!--Single Image View Controller-->
         <scene sceneID="wBq-qR-vwQ">
             <objects>
-                <viewController id="lDp-pR-GVr" customClass="SingleImageViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="lDp-pR-GVr" customClass="SingleImageViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IfM-CQ-YCB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gdj-my-pzm">
-                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Z6-w7-Qf7"/>
@@ -122,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lbf-Uz-ah4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2671" y="289"/>
+            <point key="canvasLocation" x="1864" y="288"/>
         </scene>
         <!--ProfileView-->
         <scene sceneID="1nD-eJ-GWW">
@@ -207,37 +208,13 @@
                         </tabBarAppearance>
                     </tabBar>
                     <connections>
-                        <segue destination="VLv-L9-Qew" kind="relationship" relationship="viewControllers" id="hLx-3Y-A1I"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="RmV-E8-Evd"/>
                         <segue destination="Kbm-9l-HCT" kind="relationship" relationship="viewControllers" id="kwi-1X-hCJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLE-pk-5TD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="154" y="732"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Bds-RS-Yhq">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VLv-L9-Qew" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tab_editorial_active" id="OyB-kZ-u9P"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WD8-GR-4HZ">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="YP White"/>
-                        <color key="barTintColor" name="YP White"/>
-                        <navigationBarAppearance key="standardAppearance">
-                            <color key="backgroundColor" name="YP Black"/>
-                        </navigationBarAppearance>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="H7i-xd-vgw"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Evt-DA-lXK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="924" y="295.50224887556226"/>
         </scene>
     </scenes>
     <resources>
