@@ -13,5 +13,9 @@ final class SingleImageViewController: UIViewController{
         super.viewDidLoad()
         imageView.image = image
     }
+    
+    @IBAction private func didTapBackButton(){
+        dismiss(animated: true, completion: nil)
+    }
 }
 

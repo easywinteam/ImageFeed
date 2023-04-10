@@ -106,12 +106,29 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gdj-my-pzm">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKs-IO-OFs">
+                                <rect key="frame" x="9" y="9" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="NIA-aR-Rdz"/>
+                                    <constraint firstAttribute="width" constant="48" id="TJh-0d-JUV"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Backward"/>
+                                <connections>
+                                    <action selector="didTapBackButton" destination="lDp-pR-GVr" eventType="touchUpInside" id="AHj-Pc-B98"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Z6-w7-Qf7"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
+                            <constraint firstItem="WKs-IO-OFs" firstAttribute="top" secondItem="6Z6-w7-Qf7" secondAttribute="top" constant="9" id="5hU-pY-AIo"/>
                             <constraint firstItem="Gdj-my-pzm" firstAttribute="leading" secondItem="6Z6-w7-Qf7" secondAttribute="leading" id="9fs-ak-oTo"/>
+                            <constraint firstItem="WKs-IO-OFs" firstAttribute="leading" secondItem="6Z6-w7-Qf7" secondAttribute="leading" constant="9" id="DRX-nc-aOf"/>
                             <constraint firstItem="6Z6-w7-Qf7" firstAttribute="trailing" secondItem="Gdj-my-pzm" secondAttribute="trailing" id="H5E-47-wb0"/>
+                            <constraint firstItem="WKs-IO-OFs" firstAttribute="top" secondItem="6Z6-w7-Qf7" secondAttribute="top" constant="9" id="Xy2-uf-j0n"/>
+                            <constraint firstItem="Gdj-my-pzm" firstAttribute="top" secondItem="IfM-CQ-YCB" secondAttribute="top" id="bUu-YL-Rd4"/>
+                            <constraint firstAttribute="bottom" secondItem="Gdj-my-pzm" secondAttribute="bottom" id="bWx-dS-Pvb"/>
                             <constraint firstItem="Gdj-my-pzm" firstAttribute="top" secondItem="6Z6-w7-Qf7" secondAttribute="top" id="fcO-De-uFW"/>
                             <constraint firstItem="Gdj-my-pzm" firstAttribute="bottom" secondItem="6Z6-w7-Qf7" secondAttribute="bottom" id="nct-nE-q3a"/>
                         </constraints>
@@ -221,6 +238,7 @@
         <image name="0" width="200" height="132"/>
         <image name="1" width="200" height="260"/>
         <image name="Active" width="42" height="42"/>
+        <image name="Backward" width="24" height="24"/>
         <image name="ipad.and.arrow.forward" width="20" height="22"/>
         <image name="tab_editorial_active" width="30" height="30"/>
         <image name="tab_profile_active" width="30" height="30"/>
