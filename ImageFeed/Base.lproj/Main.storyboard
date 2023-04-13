@@ -103,9 +103,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gdj-my-pzm">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="v9P-d3-F88">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gdj-my-pzm">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="132"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Gdj-my-pzm" secondAttribute="bottom" id="7H9-Qn-Yfe"/>
+                                    <constraint firstItem="Gdj-my-pzm" firstAttribute="top" secondItem="v9P-d3-F88" secondAttribute="top" id="Nxp-w0-b4j"/>
+                                    <constraint firstItem="Gdj-my-pzm" firstAttribute="leading" secondItem="v9P-d3-F88" secondAttribute="leading" id="Xkw-8Y-CKy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gdj-my-pzm" secondAttribute="trailing" id="cZS-bv-ick"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="iof-XO-HDZ"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="bMv-DT-hSh"/>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKs-IO-OFs">
                                 <rect key="frame" x="9" y="9" width="48" height="48"/>
                                 <constraints>
@@ -123,19 +136,18 @@
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
                             <constraint firstItem="WKs-IO-OFs" firstAttribute="top" secondItem="6Z6-w7-Qf7" secondAttribute="top" constant="9" id="5hU-pY-AIo"/>
-                            <constraint firstItem="Gdj-my-pzm" firstAttribute="leading" secondItem="6Z6-w7-Qf7" secondAttribute="leading" id="9fs-ak-oTo"/>
+                            <constraint firstItem="v9P-d3-F88" firstAttribute="leading" secondItem="6Z6-w7-Qf7" secondAttribute="leading" id="8zL-cJ-qBQ"/>
                             <constraint firstItem="WKs-IO-OFs" firstAttribute="leading" secondItem="6Z6-w7-Qf7" secondAttribute="leading" constant="9" id="DRX-nc-aOf"/>
-                            <constraint firstItem="6Z6-w7-Qf7" firstAttribute="trailing" secondItem="Gdj-my-pzm" secondAttribute="trailing" id="H5E-47-wb0"/>
                             <constraint firstItem="WKs-IO-OFs" firstAttribute="top" secondItem="6Z6-w7-Qf7" secondAttribute="top" constant="9" id="Xy2-uf-j0n"/>
-                            <constraint firstItem="Gdj-my-pzm" firstAttribute="top" secondItem="IfM-CQ-YCB" secondAttribute="top" id="bUu-YL-Rd4"/>
-                            <constraint firstAttribute="bottom" secondItem="Gdj-my-pzm" secondAttribute="bottom" id="bWx-dS-Pvb"/>
-                            <constraint firstItem="Gdj-my-pzm" firstAttribute="top" secondItem="6Z6-w7-Qf7" secondAttribute="top" id="fcO-De-uFW"/>
-                            <constraint firstItem="Gdj-my-pzm" firstAttribute="bottom" secondItem="6Z6-w7-Qf7" secondAttribute="bottom" id="nct-nE-q3a"/>
+                            <constraint firstItem="v9P-d3-F88" firstAttribute="top" secondItem="IfM-CQ-YCB" secondAttribute="top" id="dBt-52-PxT"/>
+                            <constraint firstAttribute="bottom" secondItem="v9P-d3-F88" secondAttribute="bottom" id="rZt-TM-4Jw"/>
+                            <constraint firstItem="v9P-d3-F88" firstAttribute="trailing" secondItem="6Z6-w7-Qf7" secondAttribute="trailing" id="t8B-3M-suM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OFc-4L-602"/>
                     <connections>
                         <outlet property="imageView" destination="Gdj-my-pzm" id="8jf-ca-dzZ"/>
+                        <outlet property="scrollView" destination="v9P-d3-F88" id="U4D-9c-kON"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lbf-Uz-ah4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -236,7 +248,6 @@
     </scenes>
     <resources>
         <image name="0" width="200" height="132"/>
-        <image name="1" width="200" height="260"/>
         <image name="Active" width="42" height="42"/>
         <image name="Backward" width="24" height="24"/>
         <image name="ipad.and.arrow.forward" width="20" height="22"/>
@@ -244,7 +255,7 @@
         <image name="tab_profile_active" width="30" height="30"/>
         <image name="user_mock" width="70" height="70"/>
         <namedColor name="YP Black">
-            <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="YP Gray">
             <color red="0.68199998140335083" green="0.68599998950958252" blue="0.70599997043609619" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
