@@ -14,10 +14,18 @@ final class SingleImageViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = image
-        rescaleAndCenterImageInScrollView(image: image)
         scrollView.minimumZoomScale = 0.1
         scrollView.maximumZoomScale = 1.25
+        imageView.image = image
+        rescaleAndCenterImageInScrollView(image: image)
+    }
+    
+    @IBAction func didTapShareButton(_ sender: UIButton) {
+        let share = UIActivityViewController(
+            activityItems: [image],
+            applicationActivities: nil
+        )
+        present(share, animated: true, completion: nil)
     }
     
     private func rescaleAndCenterImageInScrollView(image: UIImage) {
