@@ -19,7 +19,7 @@ final class ProfileViewController: UIViewController{
     }
     
     private func createProfileImage(){
-        var profileImage = UIImage(named: "user_mock")
+        let profileImage = UIImage(named: "user_mock")
         profileImageView = UIImageView(image: profileImage)
         profileImageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(profileImageView)
