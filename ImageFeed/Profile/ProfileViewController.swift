@@ -26,7 +26,7 @@ final class ProfileViewController: UIViewController{
         profileImageView.heightAnchor.constraint(equalToConstant: 70).isActive = true
         profileImageView.widthAnchor.constraint(equalToConstant: 70).isActive = true
         profileImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
-        profileImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        profileImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
     }
     
     private func createNameLabel(){
@@ -36,7 +36,7 @@ final class ProfileViewController: UIViewController{
         nameLabel?.textColor = .white
         nameLabel?.font = UIFont.systemFont(ofSize: 23, weight: .bold)
         view.addSubview(nameLabel!)
-        nameLabel?.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        nameLabel?.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         nameLabel?.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 8).isActive = true
     }
     
@@ -46,7 +46,7 @@ final class ProfileViewController: UIViewController{
         nickLabel?.text = "@ekaterinaNov"
         nickLabel?.textColor = .gray
         view.addSubview(nickLabel!)
-        nickLabel?.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        nickLabel?.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         nickLabel?.topAnchor.constraint(equalTo: nameLabel!.bottomAnchor, constant: 8).isActive = true
     }
     
@@ -56,7 +56,7 @@ final class ProfileViewController: UIViewController{
         userTextLabel?.text = "Hello, world!"
         userTextLabel?.textColor = .white
         view.addSubview(userTextLabel!)
-        userTextLabel?.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        userTextLabel?.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         userTextLabel?.topAnchor.constraint(equalTo: nickLabel!.bottomAnchor, constant: 8).isActive = true
     }
     
