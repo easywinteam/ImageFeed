@@ -25,7 +25,7 @@ final class ProfileViewController: UIViewController{
         view.addSubview(profileImageView)
         profileImageView.heightAnchor.constraint(equalToConstant: 70).isActive = true
         profileImageView.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        profileImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+        profileImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 76).isActive = true
         profileImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
     }
     
