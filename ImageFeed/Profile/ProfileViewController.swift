@@ -69,7 +69,7 @@ final class ProfileViewController: UIViewController{
         exitProfileButton.tintColor = .red
         view.addSubview(exitProfileButton)
         exitProfileButton.centerYAnchor.constraint(equalTo: profileImageView.centerYAnchor).isActive = true
-        exitProfileButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        exitProfileButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -26).isActive = true
     }
     
     @objc func logOut(){
