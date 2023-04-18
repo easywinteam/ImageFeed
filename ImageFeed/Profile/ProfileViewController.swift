@@ -66,7 +66,7 @@ final class ProfileViewController: UIViewController{
     private func createExitProfileButton(){
         exitProfileButton = UIButton.systemButton(with: UIImage(systemName: "ipad.and.arrow.forward")!, target: self, action: #selector(self.logOut))
         exitProfileButton.translatesAutoresizingMaskIntoConstraints = false
-        exitProfileButton.tintColor = .red
+        exitProfileButton.tintColor = UIColor(named: "YP Red")
         view.addSubview(exitProfileButton)
         exitProfileButton.centerYAnchor.constraint(equalTo: profileImageView.centerYAnchor).isActive = true
         exitProfileButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -26).isActive = true
