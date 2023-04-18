@@ -46,7 +46,7 @@ final class ProfileViewController: UIViewController{
         nickLabel?.translatesAutoresizingMaskIntoConstraints = false
         nickLabel?.text = "@ekaterinaNov"
         nickLabel?.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        nickLabel?.textColor = .gray
+        nickLabel?.textColor = UIColor(named: "YP Gray")
         view.addSubview(nickLabel!)
         nickLabel?.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         nickLabel?.topAnchor.constraint(equalTo: nameLabel!.bottomAnchor, constant: 8).isActive = true
