@@ -34,7 +34,7 @@ final class ProfileViewController: UIViewController{
         nameLabel?.translatesAutoresizingMaskIntoConstraints = false
         nameLabel?.text = "Екатерина Новикова"
         nameLabel?.textColor = .white
-        nameLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 23)
+        nameLabel?.font = UIFont.systemFont(ofSize: 23, weight: .bold)
         view.addSubview(nameLabel!)
         nameLabel?.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         nameLabel?.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 8).isActive = true
