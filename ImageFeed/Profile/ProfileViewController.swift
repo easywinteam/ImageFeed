@@ -10,6 +10,7 @@ final class ProfileViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         createProfileImage()
         createNameLabel()
         createNickLabel()
@@ -44,6 +45,7 @@ final class ProfileViewController: UIViewController{
         nickLabel = UILabel()
         nickLabel?.translatesAutoresizingMaskIntoConstraints = false
         nickLabel?.text = "@ekaterinaNov"
+        nickLabel?.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         nickLabel?.textColor = .gray
         view.addSubview(nickLabel!)
         nickLabel?.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
