@@ -57,6 +57,7 @@ final class ProfileViewController: UIViewController{
         userTextLabel?.translatesAutoresizingMaskIntoConstraints = false
         userTextLabel?.text = "Hello, world!"
         userTextLabel?.textColor = .white
+        userTextLabel?.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         view.addSubview(userTextLabel!)
         userTextLabel?.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         userTextLabel?.topAnchor.constraint(equalTo: nickLabel!.bottomAnchor, constant: 8).isActive = true
