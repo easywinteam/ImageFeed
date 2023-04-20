@@ -64,6 +64,14 @@
 			path = SingleImageView;
 			sourceTree = "<group>";
 		};
+		91AA47A629F12E0600E144D1 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				91AA47A429F1211200E144D1 /* AuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		91AE66EF29C722540029659E = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +94,7 @@
 				91AE66FB29C722540029659E /* AppDelegate.swift */,
 				91AE66FD29C722540029659E /* SceneDelegate.swift */,
 				91AA47A229F0306C00E144D1 /* Constants.swift */,
-				91AA47A429F1211200E144D1 /* AuthViewController.swift */,
+				91AA47A629F12E0600E144D1 /* Auth */,
 				91AA47A129E840EA00E144D1 /* SingleImageView */,
 				91B6BF4429E08AE500C33379 /* Profile */,
 				910E27EB29CD864600F1E25C /* ImageList */,
