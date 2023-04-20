@@ -243,9 +243,28 @@
                     <view key="view" contentMode="scaleToFill" id="GM7-Dl-k9b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0h-E4-2y2">
+                                <rect key="frame" x="20" y="0.0" width="374" height="896"/>
+                                <color key="backgroundColor" name="YP White"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="E1O-Pe-qwD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="c0h-E4-2y2" secondAttribute="trailing" id="8B5-C2-mQh"/>
+                            <constraint firstItem="c0h-E4-2y2" firstAttribute="leading" secondItem="GM7-Dl-k9b" secondAttribute="leadingMargin" id="ZAS-87-sfx"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="c0h-E4-2y2" secondAttribute="bottom" id="ewZ-1b-ExJ"/>
+                            <constraint firstItem="c0h-E4-2y2" firstAttribute="top" secondItem="GM7-Dl-k9b" secondAttribute="topMargin" id="whw-Zb-wZ4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="c0h-E4-2y2" id="0ih-si-xVe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOc-Xx-0Qb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
