@@ -1,6 +1,6 @@
 import UIKit
 
-protocol WebViewViewControllerDelegate{
+protocol WebViewViewControllerDelegate: AnyObject{
     
     func webViewViewController(_ vc: WebViewViewController, didAuthenticateWithCode code: String)
     
