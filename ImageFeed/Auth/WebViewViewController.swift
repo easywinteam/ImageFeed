@@ -25,6 +25,12 @@ final class WebViewViewController: UIViewController{
         let request = URLRequest(url: url)
         webView.load(request)
         
+        webView.addObserver(
+            self,
+            forKeyPath: #keyPath(WKWebView.estimatedProgress),
+            options: .new,
+            context: nil)
+        
     }
     
     
@@ -43,6 +49,17 @@ final class WebViewViewController: UIViewController{
         }
     }
     
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == #keyPath(WKWebView.estimatedProgress){
+            updateProgress()
+        }else{
+            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+        }
+    }
+    
+    private func updateProgress(){
+        
+    }
 }
 
 
