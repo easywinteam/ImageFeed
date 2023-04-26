@@ -24,13 +24,21 @@ final class WebViewViewController: UIViewController{
         let url = urlComponents.url!
         let request = URLRequest(url: url)
         webView.load(request)
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         webView.addObserver(
             self,
             forKeyPath: #keyPath(WKWebView.estimatedProgress),
             options: .new,
             context: nil)
-        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        webView.removeObserver(
+            self,
+            forKeyPath: #keyPath(WKWebView.estimatedProgress),
+            context: nil)
     }
     
     
