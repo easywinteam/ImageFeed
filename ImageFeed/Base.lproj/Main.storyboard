@@ -261,7 +261,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" image="nav_back_button"/>
                                 <connections>
-                                    <action selector="didTapBackButton:" destination="IVl-a4-4wN" eventType="touchUpInside" id="Gc5-EJ-sWB"/>
+                                    <action selector="didTapBackButton:" destination="IVl-a4-4wN" eventType="touchUpInside" id="pxK-uJ-ceD"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TCY-P4-3CZ">

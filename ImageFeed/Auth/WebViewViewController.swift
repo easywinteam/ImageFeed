@@ -24,17 +24,20 @@ final class WebViewViewController: UIViewController{
         let url = urlComponents.url!
         let request = URLRequest(url: url)
         webView.load(request)
+        updateProgress()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         webView.addObserver(
             self,
             forKeyPath: #keyPath(WKWebView.estimatedProgress),
             options: .new,
             context: nil)
+        updateProgress()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         webView.removeObserver(
             self,
             forKeyPath: #keyPath(WKWebView.estimatedProgress),
@@ -43,18 +46,7 @@ final class WebViewViewController: UIViewController{
     
     
     @IBAction func didTapBackButton(_ sender: Any) {
-    }
-    
-    private func code(from navigationAction: WKNavigationAction) -> String?{
-        if let url = navigationAction.request.url,
-           let urlComponents = URLComponents(string: url.absoluteString),
-           urlComponents.path == "/oauth/authorize/native",
-           let items = urlComponents.queryItems,
-           let codeItem = items.first(where: { $0.name == "code"}){
-            return codeItem.value
-        }else{
-            return nil
-        }
+        delegate?.webViewViewControllerDidCancel(self)
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -76,10 +68,22 @@ extension WebViewViewController: WKNavigationDelegate{
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         
         if let code = code(from: navigationAction){
-            //TODO: process code
+            delegate?.webViewViewController(self, didAuthenticateWithCode: code)
             decisionHandler(.cancel)
         }else{
             decisionHandler(.allow)
+        }
+    }
+    
+    private func code(from navigationAction: WKNavigationAction) -> String?{
+        if let url = navigationAction.request.url,
+           let urlComponents = URLComponents(string: url.absoluteString),
+           urlComponents.path == "/oauth/authorize/native",
+           let items = urlComponents.queryItems,
+           let codeItem = items.first(where: { $0.name == "code"}){
+            return codeItem.value
+        }else{
+            return nil
         }
     }
 }
