@@ -7,23 +7,14 @@ final class WebViewViewController: UIViewController{
     
     @IBOutlet private var progressView: UIProgressView!
     
+    
     weak var delegate: WebViewViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         webView.navigationDelegate = self
-        
-        var urlComponents = URLComponents(string: UnsplashAuthorizeURLString)!
-        urlComponents.queryItems = [
-            URLQueryItem(name: "client_id", value: AccessKey),                  //2
-            URLQueryItem(name: "redirect_uri", value: RedirectURI),             //3
-            URLQueryItem(name: "response_type", value: "code"),                 //4
-            URLQueryItem(name: "scope", value: AccessScope)                     //5
-        ]
-        let url = urlComponents.url!
-        let request = URLRequest(url: url)
-        webView.load(request)
+        loadWebView()
         updateProgress()
     }
     
@@ -81,9 +72,25 @@ extension WebViewViewController: WKNavigationDelegate{
            urlComponents.path == "/oauth/authorize/native",
            let items = urlComponents.queryItems,
            let codeItem = items.first(where: { $0.name == "code"}){
+            print("****I create code: \(codeItem.value ?? "Nothing")")
             return codeItem.value
         }else{
             return nil
         }
+    }
+}
+
+private extension WebViewViewController{
+    func loadWebView(){
+        var urlComponents = URLComponents(string: UnsplashAuthorizeURLString)!
+        urlComponents.queryItems = [
+            URLQueryItem(name: "client_id", value: AccessKey),
+            URLQueryItem(name: "redirect_uri", value: RedirectURI),
+            URLQueryItem(name: "response_type", value: "code"),
+            URLQueryItem(name: "scope", value: AccessScope)                     
+        ]
+        let url = urlComponents.url!
+        let request = URLRequest(url: url)
+        webView.load(request)
     }
 }
