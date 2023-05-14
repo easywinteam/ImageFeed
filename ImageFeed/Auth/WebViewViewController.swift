@@ -14,6 +14,7 @@ final class WebViewViewController: UIViewController{
         super.viewDidLoad()
         
         webView.navigationDelegate = self
+        
         loadWebView()
         updateProgress()
     }
@@ -87,7 +88,7 @@ private extension WebViewViewController{
             URLQueryItem(name: "client_id", value: AccessKey),
             URLQueryItem(name: "redirect_uri", value: RedirectURI),
             URLQueryItem(name: "response_type", value: "code"),
-            URLQueryItem(name: "scope", value: AccessScope)                     
+            URLQueryItem(name: "scope", value: AccessScope)
         ]
         let url = urlComponents.url!
         let request = URLRequest(url: url)
