@@ -1,6 +1,5 @@
 import UIKit
 
-
 final class OAuth2Service {
     static let shared = OAuth2Service()
     private let urlSession = URLSession.shared
@@ -10,7 +9,8 @@ final class OAuth2Service {
         }
         set {
             OAuth2TokenStorage().token = newValue
-        } }
+        }
+    }
     func fetchOAuthToken(
         _ code: String,
         completion: @escaping (Result<String, Error>) -> Void ){
@@ -24,7 +24,8 @@ final class OAuth2Service {
                     completion(.success(authToken))
                 case .failure(let error):
                     completion(.failure(error))
-                } }
+                }
+            }
             task.resume()
         }
 }
@@ -65,7 +66,8 @@ extension OAuth2Service {
             case scope
             case createdAt = "created_at"
         }
-    } }
+    }
+}
 
 // MARK: - HTTP Request
 
@@ -78,7 +80,8 @@ extension URLRequest {
         var request = URLRequest(url: URL(string: path, relativeTo: baseURL)!)
         request.httpMethod = httpMethod
         return request
-    } }
+    }
+}
 // MARK: - Network Connection
 enum NetworkError: Error {
     case httpStatusCode(Int)
