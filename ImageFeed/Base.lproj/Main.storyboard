@@ -253,10 +253,11 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugj-Kz-SXU">
-                                <rect key="frame" x="29" y="19" width="24" height="24"/>
+                                <rect key="frame" x="9" y="10" width="24" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="0F4-1y-Olz"/>
                                     <constraint firstAttribute="height" constant="24" id="D6r-NQ-1ji"/>
+                                    <constraint firstAttribute="width" constant="24" id="HIf-Ub-4yt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="lW5-XY-xr9"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" image="nav_back_button"/>
@@ -265,21 +266,21 @@
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TCY-P4-3CZ">
-                                <rect key="frame" x="20" y="43" width="374" height="4"/>
+                                <rect key="frame" x="0.0" y="34" width="414" height="4"/>
                                 <color key="progressTintColor" name="YP Black"/>
                             </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E1O-Pe-qwD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="TCY-P4-3CZ" secondAttribute="trailing" id="538-SP-7wi"/>
+                            <constraint firstItem="E1O-Pe-qwD" firstAttribute="trailing" secondItem="TCY-P4-3CZ" secondAttribute="trailing" id="538-SP-7wi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c0h-E4-2y2" secondAttribute="trailing" id="8B5-C2-mQh"/>
                             <constraint firstItem="TCY-P4-3CZ" firstAttribute="top" secondItem="ugj-Kz-SXU" secondAttribute="bottom" id="ChH-Th-8zK"/>
-                            <constraint firstItem="TCY-P4-3CZ" firstAttribute="leading" secondItem="GM7-Dl-k9b" secondAttribute="leadingMargin" id="Dha-mU-69G"/>
+                            <constraint firstItem="TCY-P4-3CZ" firstAttribute="leading" secondItem="E1O-Pe-qwD" secondAttribute="leading" id="Dha-mU-69G"/>
                             <constraint firstItem="c0h-E4-2y2" firstAttribute="leading" secondItem="GM7-Dl-k9b" secondAttribute="leadingMargin" id="ZAS-87-sfx"/>
                             <constraint firstAttribute="bottomMargin" secondItem="c0h-E4-2y2" secondAttribute="bottom" id="ewZ-1b-ExJ"/>
-                            <constraint firstItem="ugj-Kz-SXU" firstAttribute="top" secondItem="E1O-Pe-qwD" secondAttribute="top" constant="19" id="ijJ-Kl-e9M"/>
-                            <constraint firstItem="ugj-Kz-SXU" firstAttribute="leading" secondItem="GM7-Dl-k9b" secondAttribute="leadingMargin" constant="9" id="oyI-ja-cco"/>
+                            <constraint firstItem="ugj-Kz-SXU" firstAttribute="top" secondItem="E1O-Pe-qwD" secondAttribute="top" constant="10" id="ijJ-Kl-e9M"/>
+                            <constraint firstItem="ugj-Kz-SXU" firstAttribute="leading" secondItem="E1O-Pe-qwD" secondAttribute="leading" constant="9" id="oyI-ja-cco"/>
                             <constraint firstItem="c0h-E4-2y2" firstAttribute="top" secondItem="GM7-Dl-k9b" secondAttribute="topMargin" id="whw-Zb-wZ4"/>
                         </constraints>
                     </view>
