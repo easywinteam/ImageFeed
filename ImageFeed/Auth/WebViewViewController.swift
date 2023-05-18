@@ -3,7 +3,7 @@ import WebKit
 
 final class WebViewViewController: UIViewController{
     
-    @IBOutlet var webView: WKWebView!
+    @IBOutlet private var webView: WKWebView!
     
     @IBOutlet private var progressView: UIProgressView!
     
