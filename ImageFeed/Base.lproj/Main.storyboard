@@ -200,7 +200,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mra-Is-AHv" userLabel="EntranceButton">
-                                <rect key="frame" x="36" y="722" width="342" height="48"/>
+                                <rect key="frame" x="16" y="758" width="382" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="VMu-Ye-WNi"/>
@@ -224,10 +224,10 @@
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
                             <constraint firstItem="hOC-76-k3a" firstAttribute="centerX" secondItem="8en-au-82O" secondAttribute="centerX" id="1hZ-ie-bLI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mra-Is-AHv" secondAttribute="trailing" constant="16" id="BQq-VO-Lvr"/>
-                            <constraint firstItem="hOC-76-k3a" firstAttribute="centerY" secondItem="8en-au-82O" secondAttribute="centerY" id="LN2-1L-AlU"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="mra-Is-AHv" secondAttribute="bottom" constant="126" id="Lqf-Ng-EX6"/>
-                            <constraint firstItem="mra-Is-AHv" firstAttribute="leading" secondItem="zNR-hu-tad" secondAttribute="leadingMargin" constant="16" id="jMG-7v-Vag"/>
+                            <constraint firstItem="8en-au-82O" firstAttribute="trailing" secondItem="mra-Is-AHv" secondAttribute="trailing" constant="16" id="BQq-VO-Lvr"/>
+                            <constraint firstItem="8en-au-82O" firstAttribute="bottom" secondItem="mra-Is-AHv" secondAttribute="bottom" constant="90" id="Lqf-Ng-EX6" userLabel="bottomMargin = EntranceButton.bottom + 90"/>
+                            <constraint firstItem="mra-Is-AHv" firstAttribute="leading" secondItem="8en-au-82O" secondAttribute="leading" constant="16" id="jMG-7v-Vag"/>
+                            <constraint firstItem="hOC-76-k3a" firstAttribute="centerY" secondItem="8en-au-82O" secondAttribute="centerY" id="peW-p6-QJM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="v1P-v2-7Eh"/>
