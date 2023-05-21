@@ -1,10 +1,10 @@
 import Foundation
 
 final class OAuth2TokenStorage {
-    var token: String?
-    private static let tokenKey = "BearerToken"
+
+    private let tokenKey = "BearerToken"
     
-    static var token: String? {
+    var token: String? {
         get {
             return UserDefaults.standard.string(forKey: tokenKey)
         }
