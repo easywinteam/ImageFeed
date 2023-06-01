@@ -18,3 +18,10 @@ struct ProfileResult: Codable{
         case bio = "bio"
     }
 }
+
+struct Profile: Codable{
+    let userName: String
+    let name: String
+    let loginName: String
+    let bio: String?
+}
