@@ -26,6 +26,7 @@
 		91AE670829C722560029659E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AE670629C722560029659E /* LaunchScreen.storyboard */; };
 		91B6BF4329DECC5700C33379 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B6BF4229DECC5700C33379 /* ProfileViewController.swift */; };
 		91B6BF4629E08B2600C33379 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B6BF4529E08B2600C33379 /* SingleImageViewController.swift */; };
+		91E348B72A2A49410035C4FD /* ExtensionURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E348B62A2A49410035C4FD /* ExtensionURLSession.swift */; };
 		91EF9C912A1CC90D00F92FAE /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 91EF9C902A1CC90D00F92FAE /* ProgressHUD */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		91AE670929C722560029659E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91B6BF4229DECC5700C33379 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		91B6BF4529E08B2600C33379 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
+		91E348B62A2A49410035C4FD /* ExtensionURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionURLSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				91AA47A129E840EA00E144D1 /* SingleImageView */,
 				91B6BF4429E08AE500C33379 /* Profile */,
 				910E27EB29CD864600F1E25C /* ImageList */,
+				91E348B52A2A49140035C4FD /* Helpers */,
 				91AE670129C722540029659E /* Main.storyboard */,
 				91AE670629C722560029659E /* LaunchScreen.storyboard */,
 				91AE670929C722560029659E /* Info.plist */,
@@ -162,6 +165,14 @@
 				91B6BF4229DECC5700C33379 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		91E348B52A2A49140035C4FD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				91E348B62A2A49410035C4FD /* ExtensionURLSession.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91E348B72A2A49410035C4FD /* ExtensionURLSession.swift in Sources */,
 				91AE670029C722540029659E /* ImagesListViewController.swift in Sources */,
 				91893A472A1F9D51006D3074 /* ProfileService.swift in Sources */,
 				91AA47AA29F274D300E144D1 /* WebViewViewControllerDelegate.swift in Sources */,
