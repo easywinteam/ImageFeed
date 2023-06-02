@@ -1,7 +1,13 @@
 import Foundation
 
 final class ProfileService{
+    private var fetchProfileTask: URLSessionTask?
     
+    func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void){
+        fetchProfileTask?.cancel()
+        
+        var request = URLRequest(url: ProfileURL)
+    }
 }
 
 struct ProfileResult: Codable{
