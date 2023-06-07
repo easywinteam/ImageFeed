@@ -143,7 +143,6 @@
 				91AE66FD29C722540029659E /* SceneDelegate.swift */,
 				91AA47A229F0306C00E144D1 /* Constants.swift */,
 				91893A442A1F7D39006D3074 /* UIBlockingProgressHUD.swift */,
-				91893A462A1F9D51006D3074 /* ProfileService.swift */,
 				918841202A12435000CF9A40 /* OAuth2 */,
 				91AA47A629F12E0600E144D1 /* Auth */,
 				9188411C2A123DB300CF9A40 /* SplashViewController */,
@@ -163,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				91B6BF4229DECC5700C33379 /* ProfileViewController.swift */,
+				91893A462A1F9D51006D3074 /* ProfileService.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";

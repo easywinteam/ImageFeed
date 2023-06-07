@@ -1,9 +1,12 @@
 import Foundation
 
 final class ProfileService{
+    static let shared = ProfileService()
     private(set) var profile: Profile?
     private var fetchProfileTask: URLSessionTask?
     private let urlSession = URLSession.shared
+    
+    private init() {}
     
     func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void){
         fetchProfileTask?.cancel()
