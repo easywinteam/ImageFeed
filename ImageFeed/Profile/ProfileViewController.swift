@@ -8,6 +8,9 @@ final class ProfileViewController: UIViewController{
     private var nickLabel: UILabel?
     private var userTextLabel: UILabel?
     
+    private let profileService = ProfileService.shared
+    private let tokenStorage = OAuth2TokenStorage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,6 +20,20 @@ final class ProfileViewController: UIViewController{
         createUserTextLabel()
         createExitProfileButton()
         
+        guard let token = tokenStorage.token else { return }
+        
+        profileService.fetchProfile(token){ [weak self] result in
+            switch result{
+            case .success(let profile):
+                DispatchQueue.main.async {
+                    self?.nameLabel?.text = profile.name
+                    self?.nickLabel?.text = profile.loginName
+                    self?.userTextLabel?.text = profile.bio
+                }
+            case .failure(let error):
+                print("Error fetching profile: \(error.localizedDescription)")
+            }
+        }
     }
     
     private func createProfileImage(){
