@@ -22,18 +22,19 @@ final class ProfileViewController: UIViewController{
         
         guard let token = tokenStorage.token else { return }
         
-        profileService.fetchProfile(token){ [weak self] result in
-            switch result{
-            case .success(let profile):
-                DispatchQueue.main.async {
-                    self?.nameLabel?.text = profile.name
-                    self?.nickLabel?.text = profile.loginName
-                    self?.userTextLabel?.text = profile.bio
-                }
-            case .failure(let error):
-                print("Error fetching profile: \(error.localizedDescription)")
-            }
-        }
+//        profileService.fetchProfile(token){ [weak self] result in
+//            switch result{
+//            case .success(let profile):
+//                DispatchQueue.main.async {
+//                    self?.nameLabel?.text = profile.name
+//                    self?.nickLabel?.text = profile.loginName
+//                    self?.userTextLabel?.text = profile.bio
+//                }
+//            case .failure(let error):
+//                print("Error fetching profile: \(error.localizedDescription)")
+//            }
+//        }
+        updateProfileDetails(profile: profileService.profile)
     }
     
     private func createProfileImage(){
@@ -50,7 +51,7 @@ final class ProfileViewController: UIViewController{
     private func createNameLabel(){
         nameLabel = UILabel()
         nameLabel?.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel?.text = "Екатерина Новикова"
+        nameLabel?.text = "Eкатерина Новикова"
         nameLabel?.textColor = .white
         nameLabel?.font = UIFont.systemFont(ofSize: 23, weight: .bold)
         view.addSubview(nameLabel!)
@@ -61,7 +62,7 @@ final class ProfileViewController: UIViewController{
     private func createNickLabel(){
         nickLabel = UILabel()
         nickLabel?.translatesAutoresizingMaskIntoConstraints = false
-        nickLabel?.text = "@ekaterinaNov"
+        nickLabel?.text = "@ekatNov"
         nickLabel?.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         nickLabel?.textColor = UIColor(named: "YP Gray")
         view.addSubview(nickLabel!)
@@ -72,7 +73,7 @@ final class ProfileViewController: UIViewController{
     private func createUserTextLabel(){
         userTextLabel = UILabel()
         userTextLabel?.translatesAutoresizingMaskIntoConstraints = false
-        userTextLabel?.text = "Hello, world!"
+        userTextLabel?.text = "Hello World"
         userTextLabel?.textColor = .white
         userTextLabel?.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         view.addSubview(userTextLabel!)
@@ -95,5 +96,17 @@ final class ProfileViewController: UIViewController{
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    private func updateProfileDetails(profile: Profile?) {
+        if let profile = profile {
+            nameLabel?.text = profile.name
+            nickLabel?.text = profile.loginName
+            userTextLabel?.text = profile.bio
+        } else {
+            nameLabel?.text = "Error"
+            nickLabel?.text = "Error"
+            userTextLabel?.text = "Error"
+        }
     }
 }

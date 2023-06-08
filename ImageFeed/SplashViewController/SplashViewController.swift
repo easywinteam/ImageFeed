@@ -64,13 +64,36 @@ extension SplashViewController: AuthViewControllerDelegate {
         oauth2Service.fetchOAuthToken(code) { [weak self] result in
             guard let self = self else { return }
             switch result {
-            case .success:
-                self.switchToTabBarController()
-                UIBlockingProgressHUD.dismiss()
+            case .success(let token):
+                self.fetchProfile(token: token)
             case .failure:
                 UIBlockingProgressHUD.dismiss()
                 break
             }
         }
+    }
+    
+    private func fetchProfile(token: String) {
+        profileService.fetchProfile(token){ [weak self] result in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                switch result {
+                case .success(let result):
+                    self.switchToTabBarController()
+                case .failure(let error):
+                    self.showAlertViewController()
+                    break
+                }
+                UIBlockingProgressHUD.dismiss()
+            }
+        }
+    }
+    private func showAlertViewController() {
+        let alertVC = UIAlertController(
+            title: "Что-то пошло нет так",
+            message: "Не удалось войти в систему",
+            preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default)
+        alertVC.addAction(action)
     }
 }
