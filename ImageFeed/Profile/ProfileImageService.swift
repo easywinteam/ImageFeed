@@ -1,6 +1,7 @@
 import UIKit
 
 final class ProfileImageService {
+    static let shared = ProfileImageService()
     private let tokenStorage = OAuth2TokenStorage()
     private let urlSession = URLSession.shared
     private (set) var avatarURL: String?
