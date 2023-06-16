@@ -10,6 +10,7 @@ final class ProfileViewController: UIViewController{
     
     private let profileService = ProfileService.shared
     private let tokenStorage = OAuth2TokenStorage()
+    private var profileImageServiceObserver: NSObjectProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,18 +23,16 @@ final class ProfileViewController: UIViewController{
         
         guard let token = tokenStorage.token else { return }
         
-//        profileService.fetchProfile(token){ [weak self] result in
-//            switch result{
-//            case .success(let profile):
-//                DispatchQueue.main.async {
-//                    self?.nameLabel?.text = profile.name
-//                    self?.nickLabel?.text = profile.loginName
-//                    self?.userTextLabel?.text = profile.bio
-//                }
-//            case .failure(let error):
-//                print("Error fetching profile: \(error.localizedDescription)")
-//            }
-//        }
+        profileImageServiceObserver = NotificationCenter.default
+            .addObserver(
+                forName: ProfileImageService.didChangeNotification,
+                object: nil,
+                queue: .main
+            ) { [weak self] _ in
+                guard let self = self else { return }
+                 self.updateAvatar()
+            }
+        updateAvatar()
         updateProfileDetails(profile: profileService.profile)
     }
     
@@ -108,5 +107,13 @@ final class ProfileViewController: UIViewController{
             nickLabel?.text = "Error"
             userTextLabel?.text = "Error"
         }
+    }
+    
+    private func updateAvatar() {
+        guard
+            let profileImageURL = ProfileImageService.shared.avatarURL,
+            let url = URL(string: profileImageURL)
+        else { return }
+        // TODO [Sprint 11] обновить аватар, используя кингфишер
     }
 }
