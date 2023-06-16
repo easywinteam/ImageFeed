@@ -7,7 +7,7 @@ final class WebViewViewController: UIViewController{
     
     @IBOutlet private var progressView: UIProgressView!
     
-    
+    private var estimatedProgressObservation: NSKeyValueObservation?
     weak var delegate: WebViewViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -16,6 +16,7 @@ final class WebViewViewController: UIViewController{
         webView.navigationDelegate = self
         
         loadWebView()
+        
         updateProgress()
     }
     
@@ -47,6 +48,16 @@ final class WebViewViewController: UIViewController{
         }else{
             super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
         }
+    }
+    
+    private func configureProgressBarObserver() {
+        estimatedProgressObservation = webView.observe(
+            \.estimatedProgress,
+            options: [],
+             changeHandler: {[weak self] _, _ in
+                 guard let self = self else { return }
+                 self.updateProgress()
+             })
     }
     
     private func updateProgress(){
