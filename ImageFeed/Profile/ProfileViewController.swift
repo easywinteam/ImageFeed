@@ -115,7 +115,7 @@ final class ProfileViewController: UIViewController{
             let profileImageURL = ProfileImageService.shared.avatarURL,
             let url = URL(string: profileImageURL)
         else { return }
-        // TODO [Sprint 11] обновить аватар, используя кингфишер
+        
         let placeholderImage = UIImage(named: "user_mock")
         profileImageView.kf.setImage(with: url, placeholder: placeholderImage)
     }
